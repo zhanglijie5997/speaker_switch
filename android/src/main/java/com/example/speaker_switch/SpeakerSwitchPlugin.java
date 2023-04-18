@@ -56,6 +56,10 @@ public class SpeakerSwitchPlugin implements FlutterPlugin, MethodCallHandler {
       case "getPlatformVersion":
         result.success("Android " + android.os.Build.VERSION.RELEASE);
         break;
+      case "isOpenLoudspeaker":
+        boolean routing = audioManager.isSpeakerphoneOn();
+        result.success(routing);
+        break;
       case "openLoudspeaker":
         if (audioManager != null) {
           try {

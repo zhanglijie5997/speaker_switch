@@ -34,6 +34,9 @@ abstract class SpeakerSwitchPlatform extends PlatformInterface {
   Future<bool?> openReceiver() {
     throw UnimplementedError('openReceiver() has not been implemented.');
   }
+  Future<bool?> isOpenLoudspeaker() {
+    throw UnimplementedError('openReceiver() has not been implemented.');
+  }
 
   Future<void> init() {
     throw UnimplementedError('init() has not been implemented.');

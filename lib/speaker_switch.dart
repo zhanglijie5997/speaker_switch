@@ -20,6 +20,9 @@ class SpeakerSwitch {
   Future<bool?> openReceiver() {
     return SpeakerSwitchPlatform.instance.openReceiver();
   }
+  Future<bool?> isOpenLoudspeaker() {
+    return SpeakerSwitchPlatform.instance.isOpenLoudspeaker();
+  }
 
   Future<void> init() async{
     SpeakerSwitchPlatform.instance.init();

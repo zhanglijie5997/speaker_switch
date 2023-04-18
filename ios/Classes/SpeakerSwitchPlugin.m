@@ -56,6 +56,15 @@ AVAudioSessionPortDescription *outputPort;
           NSLog(@"Audio output mode: Unknown");
       }
     result([NSNumber numberWithBool:YES]);
+  }else if ([@"isOpenLoudspeaker" isEqualToString:call.method]) {
+    if ([outputPort.portType isEqualToString:AVAudioSessionPortBuiltInSpeaker]) {
+        // 当前正在使用扬声器
+        NSLog(@"Using speaker.");
+        result([NSNumber numberWithBool:YES])
+    }else {
+        result([NSNumber numberWithBool:NO])
+
+    }
   }
 //   else if([@"openLoudspeaker" isEqualToString:call.method]) {
 //         result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
